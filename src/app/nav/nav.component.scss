@@ -1,11 +1,9 @@
 
 
 header {
-  @import url('https://fonts.googleapis.com/css?family=Raleway');
   background: rgb(171, 171, 218);
   height: 100px;
   margin: 0;
-  font-family: 'Raleway', sans-serif;
 
   .logo {
     font-weight: bold;
@@ -23,17 +21,18 @@ a {
 }
 
 nav {
-  padding: 25px;
+  padding: 2em;
   ul {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: none;
+    justify-content: flex-end;
+    padding: 0 2em;
   }
   li {
     list-style: none;
     a {
+      padding:0 1em;
       &:hover {
         background: rgb(73, 73, 73);
       }
