@@ -9,10 +9,12 @@ ul {
     padding: 2em;
     border-radius: 4px;
     display: grid;
-    grid-template-columns: 70px auto; 
+    grid-template-columns: 200px auto; 
+    h2 {
+
+    }
     p {
       font-weight: bold;
-      margin-left: 100px;
     } 
   }
 }
