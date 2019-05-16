@@ -12,7 +12,23 @@ section {
 }
 
 .white {
+    transform: translateY(10%);
     background: white;
+    .container {
+        color: black;
+        font-size: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 25%));
+        grid-column-gap: auto;
+        grid-row-gap: auto;
+        justify-items: center;
+        div {
+            text-align: center;
+            img {
+                height: 50px;
+            }
+        }
+    }
 }
 h1 {
     font-size: 12rem;
