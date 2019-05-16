@@ -1,0 +1,38 @@
+html {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+section {
+   padding: 5% 10%;
+   background: rgb(171, 171, 218);
+   box-sizing: inherit;
+   height: 50rem;
+   color: white;
+}
+
+.white {
+    background: white;
+}
+h1 {
+    font-size: 12rem;
+    padding: 0 4rem;
+    letter-spacing: .02rem;
+    .heading {
+        float: right;
+        clear: right;
+
+    }
+    .subheading {
+        float: right;
+        clear: right;
+    }
+}
+.heading-slogan {
+    float: right;
+    clear: right;
+    width: 80%;
+    font-size: 50px;
+    text-align: right;
+    padding: 0 3.2rem;
+}

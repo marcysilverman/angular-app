@@ -8,36 +8,57 @@
 </head>
 <body>
   <div class="contact-form">
-    <form>
+    <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
       <h2> Contact Us </h2>
       <label for="name">Name*</label>
       <input
         type="text"
+        formControlName="name"
         name="name"
         id="name"
         class="contact-input"
         placeholder="Tom Smith"
         required>
-  
+      <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+        <div *ngIf="messageForm.controls.name.errors.required">Your Name is Required</div>
+      </div>
   
       <label for="email">Email</label>
       <input 
         type="email"
+        formControlName="email"
         name="email"
         id="email"
         class="contact-input"
         placeholder="email@email.com">
+      <div *ngIf="submitted && messageForm.controls.email.errors" class="error">
+        <div *ngIf="messageForm.controls.email.errors.required">Your Email is Required</div>
+      </div>
   
       <label for="phone">Phone Number</label>
       <input 
         type="text"
         name="phone"
+        formControlName="phone"
         id="phone"
         class="contact-input"
         placeholder="123-456-7890">
+
+        <div *ngIf="submitted && messageForm.controls.phone.errors" class="error">
+          <div *ngIf="messageForm.controls.phone.errors.required">Your Phone is Required</div>
+        </div>
   
-      <button id="send-btn" name="button" type="submit">Send it!</button>
-    </form>
-  </div>
+        <h3 *ngIf="sucess">Your form is valid!</h3> 
+        <input type="submit" value="Send message" class="cta">
+      </form>
+      <div *ngIf="submitted" class="results">
+        <strong>Name:</strong>
+        <p>{{ messageForm.controls.name.value }}</p>
+        <strong>Email:</strong>
+        <p>{{ messageForm.controls.email.value }}</p>
+        <strong>Phone:</strong>
+        <p>{{ messageForm.controls.phone.value }}</p>
+      </div>
+    </div>
 </body>
 </html>

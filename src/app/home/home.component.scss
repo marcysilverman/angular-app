@@ -3,6 +3,7 @@ ul {
   margin: 0;
   padding: 2em;
 
+
   li {
     margin: 2em 0;
     background: rgb(232, 229, 229);
@@ -13,5 +14,8 @@ ul {
     p {
       font-weight: bold;
     } 
+    img {
+      border-radius: 50%;
+    }
   }
 }
